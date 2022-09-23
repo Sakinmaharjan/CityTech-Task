@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <!-- Bootstrap CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+      *{ 
+        box-sizing:border-box;
+      }
+
+      .column{
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: auto;
+      }
+
+      .row:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+    
+    <title>Employee Form:</title>
+    
+</head>
+
+<body>
+<!-- 
+  <nav class="navbar navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" width="30" height="30" alt="Bootstrap">
+      </a>  
+
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#">Documentation</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#">Examples</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#">Themes</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#">Expo</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>  
+      
+    </div>
+      
+  </nav> -->
+
+  <!-- navbar section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary p-2 sticky-top">
+    <a class="navbar-brand text-light" href="#">
+      <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+    </a>
+    <a class="navbar-brand text-light" href="#">Docs</a>
+      <ul class="navbar-nav me-auto" style="width:100%;">
+        <li class="nav-item active">
+          <a class="nav-link text-light" href="#">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Icons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Themes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex mt-3 mb-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger" type="submit">Search</button>
+      </form>
+      
+  </nav>
+  <!-- form section -->
+  <div class="form">
+    <form method="post" action="dashboard.php" style="text-align: center; margin: 0 auto;">
+      <h4>Employee Profile:</h4>
+      <div class="container border p-3 shadow mt-5" style="width: 500px; margin:auto;">
+        
+        <div class="row">
+          <div class="column" style="background-color:cadetblue">
+            <label for="Employee ID" class="employee-id">Employee ID:</label>
+          </div>
+          <div class="column" style="background-color:cadetblue">
+            <input type="number" name="employeeid" id="e_id" placeholder="Employee ID" autofocus required maxlength="45">
+          </div>
+        </div> 
+        
+        <div class="row">
+          <div class="column" style="background-color:cadetblue">
+            <label for="first-name" class="form-label">First Name:</label>
+          </div>
+          <div class="column" style="background-color:cadetblue">
+            <input type="text" name="firstname" id="f_name" placeholder="Your First Name" pattern="[a-zA-Z]+" required maxlength="45">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color:cadetblue">
+            <label for="first-name" class="form-label">Middle Name:</label>
+          </div>
+          <div class="column" style="background-color:cadetblue">
+            <input type="text" name="middlename" id="mid_name" placeholder="Your Middle Name" maxlength="45">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="last-name" class="form-label">Last Name:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="text" name="lastname" id="l_name" placeholder="Your Last Name" pattern="[a-zA-Z]+" required maxlength="45">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="gender" class="form-label">Gender:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="radio" name="Gender" id="Gender" value="male" required>Male
+            <input type="radio" name="Gender" id="Gender" value="female" required>Female
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="contact" class="form-label">Contact Number:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="tel" name="contact" id="contact" placeholder="Your Contact Number" pattern="[0-9]{10}" required>    
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="email" class="form-label">Email ID:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="email" name="uemail" id="u_email" placeholder="Your Email ID" autofocus required maxlength="45">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="address" class="form-label">Address:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="text" name="Address" id="address" placeholder="Your Address" pattern="[a-zA-Z]+" required maxlength="45">
+          </div>
+        </div>
+          
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="designation" class="form-label">Designation:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="text" name="designation" id="designation" placeholder="Employee's Designation" pattern="[a-zA-Z]+" required maxlength="45">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="employeelevel" class="form-label">Employee Level:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <select name="designation" id="designation" autofocus required>
+              <option>CEO</option>
+              <option>Departmental Chief</option>
+              <option>Associate Manager</option>
+              <option>Junior Manager</option>
+              <option>Intern</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="joiningdate" class="form-label">Joining Date:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="date" name="date" id="date" autofocus required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="employmenttype" class="form-label">Employment Type:</label>
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <input type="radio" name="employmenttype" id="emp_type" value="permanenet" required>Permanent 
+            <input type="radio" name="employmenttype" id="emp_type" value="temporary" required>Temporary
+            <input type="radio" name="employmenttype" id="emp_type" value="contract" required>Contract
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color: cadetblue">
+            <label for="submit" class="form-label">Submit Here:</label>
+            
+          </div>
+          <div class="column" style="background-color: cadetblue">
+            <button>Submit</button>
+          </div>
+        </div>
+        
+      </div> 
+    </form> 
+  </div>
+      
+</body>
+</html>

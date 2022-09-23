@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Form:</title>
+</head>
+<body>
+    <form>
+        <legend>
+            <p>Employee Profile:</p>
+            <p><label>Employee ID:</label>
+            <input type="number" name="employeeid" id="e_id" placeholder="Employee ID" required maxlength="45">
+            <p><label>First Name:</label>
+            <input type="text" name="firstname" id="f_name" placeholder="Your First Name" required maxlength="45">
+            <p><label>Middle Name:</label>
+            <input type="text" name="secondname" id="mid_name" placeholder="Your Middle Name" required maxlength="45">
+            <p><label>Last Name:</label>
+            <input type="text" name="lastname" id="l_name" placeholder="Your Last Name" required maxlength="45">
+            <p><label>Contact Number:</label>
+            <input type="number" name="number" id="number" placeholder="Your Contact Number" required maxlength="45">    
+            <p><label>Address:</label>
+            <input type="text" name="Address" id="address" placeholder="Your Address" required maxlength="45">
+            <p><label>Designation:</label>
+            <input type="text" name="designation" id="designation" placeholder="Employee's Designation required maxlength="45">
+            <p><label>Employee Level:</label>
+            <select name="designation" id="designation">
+                <option>Departmental Chief</option>
+                <option>Associate Manager</option>
+                <option>Junior Manager</option>
+                <option>Intern</option>
+            </select>
+            <p><label>Joining Date:</label>
+            <input type="date" name="date" id="date">
+            <p><label>Employment Type:</label>
+            <input type="radio" name="employmenttype" id="emp_type">Permanent 
+            <input type="radio" name="employmenttype" id="emp_type">Temporary
+            <input type="radio" name="employmenttype" id="emp_type">Contractual
+        </legend>
+        
+    </form>
+    <form action="dashboard.php" method="post">
+        <input type="submit" name="Submit">
+    </form>
+</body>
+</html>
